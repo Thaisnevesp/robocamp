@@ -2,7 +2,7 @@
 Documentation        Keywords que representam a página de cadastro de matriculas
 
 Library        Browser
-Library        libs/DateTricks.py    
+Library        libs/DateTricks.py
 
 *** Keywords ***
 Go To Enrolls
@@ -31,10 +31,10 @@ Fill Start Date
     Focus    css=input[name=start_date]
 
     ${start_date}        Get Start Date
-
+    
     FOR    ${number}    IN    @{start_date}
         Keyboard Key    press    ${number}
-        
     END
 
-
+Submmit Enroll Form
+    Click        css=button >> text=Salvar
